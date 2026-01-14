@@ -1,6 +1,6 @@
 # Research Assistant
 
-A LangChain non Hybrid RAG-based research paper analysis tool powered by AWS Bedrock, EC2 and Streamlit.
+An End to End Generative AI Non-Hybrid App with Non Hybrid RAG Based Research Paper Analysis Tool Powered by Langchain, FAISS, AWS Bedrock, EC2 and Streamlit.
 
 ## Features
 - Upload and index multiple PDF research papers
