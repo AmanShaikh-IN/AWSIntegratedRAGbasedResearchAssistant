@@ -1,4 +1,4 @@
-# Research Assistant
+# AWS and LangChain Integrated RAG Based Research Assistant
 
 An End to End Generative AI Non-Hybrid App with Non Hybrid RAG Based Research Paper Analysis Tool Powered by Langchain, FAISS, AWS Bedrock, EC2 and Streamlit.
 
