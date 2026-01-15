@@ -13,44 +13,29 @@ Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **S
 
 ## Architecture
 
-User (Browser)
-   │
-   ▼
-Streamlit UI
-   │
-   ├── PDF Upload
-   │       │
-   │       ▼
-   │   Text Extraction (PyMuPDF)
-   │       │
-   │       ▼
-   │   Text Cleaning & Normalization
-   │       │
-   │       ▼
-   │   Recursive Chunking
-   │       │
-   │       ▼
-   │   Titan Embeddings (AWS Bedrock)
-   │       │
-   │       ▼
-   │   FAISS Vector Store (In-Memory)
-   │
-   └── Natural Language Questions
-           │
-           ▼
-   Chat History–Aware Query Rewriting (LLM of Your Choice)
-           │
-           ▼
-   Vector Similarity Search (FAISS)
-           │
-           ▼
-   Context Assembly
-           │
-           ▼
-   Your Chosen LLM
-           │
-           ▼
-   Answer + Source Attribution
+## Architecture
+
+```mermaid
+flowchart TD
+    U[User / Browser]
+    UI[Streamlit UI]
+    PDF[PDF Upload]
+    EX[Text Extraction<br/>(PyMuPDF)]
+    CL[Cleaning & Chunking]
+    EMB[Text Embeddings<br/>(Amazon Titan)]
+    VS[FAISS Vector Store<br/>(In-Memory)]
+    QR[Query Recontextualization<br/>(LLM of Choice)]
+    RET[Vector Retrieval]
+    CTX[Context Assembly]
+    LLM[Answer Generation<br/>(AWS Bedrock)]
+    OUT[Response + Sources]
+
+    U --> UI
+    UI --> PDF
+    PDF --> EX --> CL --> EMB --> VS
+    UI --> QR --> RET
+    VS --> RET --> CTX --> LLM --> OUT
+```
 
 ## Prerequisites
 - Python 3.8+
