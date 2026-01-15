@@ -23,7 +23,7 @@ Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **S
 ![View Source Documents](docs/media/Sources.png)
 
 ### Output
-![Indexed Paper Library](docs/media/indexed.png)
+![Indexed Paper Library](docs/media/Indexed.png)
 
 ## Architecture
 
