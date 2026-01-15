@@ -24,6 +24,7 @@ flowchart TD
     CL["Cleaning & Chunking"]
     EMB["Text Embedding(Amazon Titan)"]
     VS["FAISS Vector Store(In-Memory)"]
+    UQ["User Query"]
     QR["Query Recontextualization(LLM of Choice)"]
     RET["Vector Retrieval"]
     CTX["Context Assembly"]
@@ -33,7 +34,7 @@ flowchart TD
     U --> UI
     UI --> PDF
     PDF --> EX --> CL --> EMB --> VS
-    UI --> QR --> RET
+    UI --> UQ --> QR --> RET
     VS --> RET --> CTX --> LLM --> OUT
 ```
 
