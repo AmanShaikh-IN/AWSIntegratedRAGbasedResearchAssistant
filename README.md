@@ -11,7 +11,19 @@ Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **S
 - Vector search powered by FAISS
 - AWS Bedrock for intelligent responses
 
-## Architecture
+## Demo
+
+### Input
+![Input screen](docs/media/Input_Processing_UI.png)
+
+### Generation
+![Generation completed](docs/media/Processed_Output.png)
+
+### Source Documents
+![View Source Documents](docs/media/Sources.png)
+
+### Output
+![Indexed Paper Library](docs/media/indexed.png)
 
 ## Architecture
 
