@@ -1,13 +1,56 @@
 # AWS and LangChain Integrated RAG Based Research Assistant
 
-An End to End Generative AI App with Non Hybrid RAG Based Research Paper Analysis Tool Powered by Langchain, FAISS, AWS Bedrock, EC2 and Streamlit.
+A End-to-End Self Hosted History Aware Retrieval-Augmented Generation (RAG) Research Assistant Designed for Exploring Academic papers. This application allows users to upload multiple research PDFs, semantically index them, and ask natural-language questions that are answered **strictly from the uploaded papers**, deployable locally or with AWS EC2.
+
+Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **Streamlit**, the system performs context-aware retrieval with conversational memory, making it ideal for literature review, paper comprehension, and technical research workflows, designed as an ephemeral, in-memory system, optimized for rapid, one-off exploration.
 
 ## Features
 - Upload and index multiple PDF research papers
 - Ask questions about your papers using natural language
 - Context-aware retreival with chat history
 - Vector search powered by FAISS
-- AWS Bedrock (Claude) for intelligent responses
+- AWS Bedrock for intelligent responses
+
+## Architecture
+
+User (Browser)
+   │
+   ▼
+Streamlit UI
+   │
+   ├── PDF Upload
+   │       │
+   │       ▼
+   │   Text Extraction (PyMuPDF)
+   │       │
+   │       ▼
+   │   Text Cleaning & Normalization
+   │       │
+   │       ▼
+   │   Recursive Chunking
+   │       │
+   │       ▼
+   │   Titan Embeddings (AWS Bedrock)
+   │       │
+   │       ▼
+   │   FAISS Vector Store (In-Memory)
+   │
+   └── Natural Language Questions
+           │
+           ▼
+   Chat History–Aware Query Rewriting (LLM of Your Choice)
+           │
+           ▼
+   Vector Similarity Search (FAISS)
+           │
+           ▼
+   Context Assembly
+           │
+           ▼
+   Your Chosen LLM
+           │
+           ▼
+   Answer + Source Attribution
 
 ## Prerequisites
 - Python 3.8+
@@ -109,12 +152,6 @@ Navigate to `http://your-ec2-public-ip:8501`
 3. Switch to "Ask Questions" tab
 4. Ask questions about your papers
 5. View sources for transparency
-
-## Troubleshooting
-
-- **No response from LLM**: Check AWS credentials and Bedrock model access
-- **PDF extraction fails**: Ensure PDFs are text-based (not scanned images)
-- **Out of memory**: Reduce chunk size or use larger EC2 instance
 
 ## License
 
