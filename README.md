@@ -14,7 +14,7 @@ Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **S
 ## Demo
 
 ### Input
-![Input screen](docs/media/Input_Processing_UI.png)
+![Input screen](docs/media/Input.png)
 
 ### Generation
 ![Generation completed](docs/media/Processed_Output.png)
