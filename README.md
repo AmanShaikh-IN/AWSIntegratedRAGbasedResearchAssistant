@@ -22,7 +22,7 @@ flowchart TD
     PDF["PDF Upload"]
     EX["Text Extraction(PyMuPDF)"]
     CL["Cleaning & Chunking"]
-    EMB["Text Embedding(Amazon Titan)""]
+    EMB["Text Embedding(Amazon Titan)"]
     VS["FAISS Vector Store(In-Memory)"]
     QR["Query Recontextualization(LLM of Choice)"]
     RET["Vector Retrieval"]
