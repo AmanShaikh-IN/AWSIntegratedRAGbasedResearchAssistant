@@ -1,6 +1,6 @@
 # AWS and LangChain Integrated RAG Based Research Assistant
 
-A End-to-End Self Hosted History Aware Retrieval-Augmented Generation (RAG) Research Assistant Designed for Exploring Academic Papers. This application allows users to upload multiple research PDFs, semantically index them, and ask natural-language questions that are answered **strictly from the uploaded papers**, deployable locally or with AWS EC2.
+A End-to-End History Aware Retrieval-Augmented Generation (RAG) Research Assistant Designed for Exploring Academic Papers. This application allows users to upload multiple research PDFs, semantically index them, and ask natural-language questions that are answered **strictly from the uploaded papers**, deployable with Streamlit Cloud or with AWS EC2.
 
 Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **Streamlit**, the system performs context-aware retrieval with conversational memory, making it ideal for literature review, paper comprehension, and technical research workflows, designed as an ephemeral, in-memory system, optimized for rapid, one-off exploration.
 
