@@ -17,18 +17,18 @@ Built using **LangChain**, **FAISS**, LLama **AWS Bedrock**, **AWS EC2** and **S
 
 ```mermaid
 flowchart TD
-    U[User / Browser]
-    UI[Streamlit UI]
-    PDF[PDF Upload]
-    EX[Text Extraction(PyMuPDF)]
-    CL[Cleaning & Chunking]
-    EMB[Text Embedding(Amazon Titan)]
-    VS[FAISS Vector Store(In-Memory)]
-    QR[Query Recontextualization(LLM of Choice)]
-    RET[Vector Retrieval]
-    CTX[Context Assembly]
-    LLM[Answer Generation(AWS Bedrock)]
-    OUT[Response + Sources]
+    U["User / Browser"]
+    UI["Streamlit UI"]
+    PDF["PDF Upload"]
+    EX["Text Extraction(PyMuPDF)"]
+    CL["Cleaning & Chunking"]
+    EMB["Text Embedding(Amazon Titan)""]
+    VS["FAISS Vector Store(In-Memory)"]
+    QR["Query Recontextualization(LLM of Choice)"]
+    RET["Vector Retrieval"]
+    CTX["Context Assembly"]
+    LLM["Answer Generation(AWS Bedrock)"]
+    OUT["Response + Sources"]
 
     U --> UI
     UI --> PDF
